@@ -246,8 +246,8 @@ GOBJECT_INTROSPECTION_CHECK([0.10.0])
    AM_CONDITIONAL([HAVE_INTROSPECTION], [false])
    enable_introspection=no])
 
-GTK_DOC_CHECK([1.14],[--flavour no-tmpl])
-AM_CONDITIONAL([BUILD_GTK_DOC], [test "x$enable_gtk_doc" = "xyes" || test ! -f "autogen.sh"])
+#GTK_DOC_CHECK([1.14],[--flavour no-tmpl])
+AM_CONDITIONAL([BUILD_GTK_DOC], [false])
 
 APPSTREAM_XML
 
