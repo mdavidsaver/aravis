@@ -290,6 +290,7 @@ _process_data_block (ArvGvStreamThreadData *thread_data,
 					 block_end - frame->buffer->priv->size,
 					 packet_id, frame->frame_id);
 		thread_data->n_size_mismatch_errors++;
+		frame->buffer->priv->status = ARV_BUFFER_STATUS_SIZE_MISMATCH;
 
 		block_end = frame->buffer->priv->size;
 		block_size = block_end - block_offset;
